@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          # TODO: add `cache: 'npm'` once package-lock.json is committed.
+
+      - name: Install dependencies
+        # TODO: switch to `npm ci` once package-lock.json is committed.
+        run: npm install --no-audit --no-fund
+
+      - name: Build
+        run: npm run build
