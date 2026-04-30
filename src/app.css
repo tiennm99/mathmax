@@ -1,3 +1,7 @@
+@import '@fontsource/be-vietnam-pro/400.css';
+@import '@fontsource/be-vietnam-pro/500.css';
+@import '@fontsource/be-vietnam-pro/700.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,5 +15,12 @@
 
   html {
     -webkit-text-size-adjust: 100%;
+    font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  }
+
+  /* Visible focus ring for keyboard users on draggable SVG vertices. */
+  svg [role='slider']:focus-visible {
+    stroke: #4f46e5;
+    stroke-width: 3;
   }
 }

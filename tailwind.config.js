@@ -4,7 +4,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['system-ui', 'sans-serif'],
+        sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        // Pedagogical tick palette — one color per side-correspondence pair.
+        pair: {
+          1: '#D7263D',
+          2: '#1B998B',
+          3: '#F46036',
+        },
       },
     },
   },
