@@ -26,14 +26,14 @@ export const topics = {
   'so-hoc': {
     title: 'Số học',
     blurb: 'Phép tính, ước-bội, phân số, số nguyên. Trực quan hoá thuật toán và quy luật.',
-    status: 'comingSoon',
-    href: null,
+    status: 'live',
+    href: '/so-hoc/',
   },
   'dai-so': {
     title: 'Đại số',
     blurb: 'Biểu thức, phương trình, hàm số. Thao tác kéo-thả các đối tượng đại số.',
-    status: 'comingSoon',
-    href: null,
+    status: 'live',
+    href: '/dai-so/',
   },
   'hinh-hoc': {
     title: 'Hình học',

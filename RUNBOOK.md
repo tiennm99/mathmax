@@ -55,3 +55,7 @@ When the trigger fires:
 ## Initial CI note
 
 Initial CI uses `npm install` (no lockfile committed yet). After first successful run, user commits `package-lock.json` locally and we switch CI to `npm ci` in a follow-up PR.
+
+## Bundle notes
+
+- **KaTeX** (`katex@^0.16`) is loaded site-wide via `import 'katex/dist/katex.min.css'` in `+layout.svelte`. CSS + woff2 fonts add ~280KB total to the static asset payload. Math is server-rendered via `katex.renderToString` (in `src/lib/components/tex.svelte`), so KaTeX **JavaScript runs only at build time** — the runtime cost is the CSS + fonts, not the JS module. If Lighthouse perf drops below 90 after content growth, consider scoping CSS imports per-route.

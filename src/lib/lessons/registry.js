@@ -1,3 +1,5 @@
+import { vi as gcdCopy } from './uoc-chung-lon-nhat/copy.vi.js';
+import { vi as diffSquaresCopy } from './hieu-hai-binh-phuong/copy.vi.js';
 import { vi as sssCopy } from './tam-giac-bang-nhau/copy.vi.js';
 import { vi as similarityCopy } from './tam-giac-dong-dang/copy.vi.js';
 import { vi as inscribedCopy } from './goc-noi-tiep/copy.vi.js';
@@ -7,8 +9,9 @@ import { vi as inscribedCopy } from './goc-noi-tiep/copy.vi.js';
  *            gradeLabel: string, intro: string, [k: string]: any}} LessonCopy
  */
 
+// Order: by topic (số học → đại số → hình học), then by grade ascending.
 /** @type {LessonCopy[]} */
-export const lessons = [sssCopy, similarityCopy, inscribedCopy];
+export const lessons = [gcdCopy, diffSquaresCopy, sssCopy, similarityCopy, inscribedCopy];
 
 /** @param {string} topic */
 export function lessonsByTopic(topic) {
