@@ -14,15 +14,15 @@ Toán tương tác cho học sinh THCS Việt Nam (lớp 6-9). Số học, Đạ
 
 ## Develop
 
-Yêu cầu: Node 24+, npm 11+.
+Yêu cầu: Node 24+, pnpm 11+.
 
 ```sh
-npm install
-npm run dev          # http://localhost:5173/mathmax/
-npm run test         # Vitest (geom-engine unit tests)
-npm run check        # svelte-check + JSDoc strict
-npm run build        # Static output → build/
-npm run preview      # Serve build/
+pnpm install
+pnpm dev          # http://localhost:5173/mathmax/
+pnpm test         # Vitest (geom-engine unit tests)
+pnpm check        # svelte-check + JSDoc strict
+pnpm build        # Static output → build/
+pnpm preview      # Serve build/
 ```
 
 ## Deploy

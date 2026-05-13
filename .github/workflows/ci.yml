@@ -15,14 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
-          # TODO: add `cache: 'npm'` once package-lock.json is committed.
+          cache: 'pnpm'
 
       - name: Install dependencies
-        # TODO: switch to `npm ci` once package-lock.json is committed.
-        run: npm install --no-audit --no-fund
+        run: pnpm install --frozen-lockfile
 
       - name: Build
-        run: npm run build
+        run: pnpm build
