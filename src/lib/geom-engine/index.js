@@ -14,3 +14,12 @@ export {
 export { triangle, sides, congruentSSS } from './triangle.js';
 export { circle, projectToCircle, pointOnCircle, angleAtVertex } from './circle.js';
 export { tickPositions } from './ticks.js';
+export {
+  translate,
+  rotate,
+  shear,
+  compose,
+  applyToPoint,
+  applyToPolygon,
+  approxEqualMat,
+} from './transforms.js';
